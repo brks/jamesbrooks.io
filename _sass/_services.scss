@@ -155,7 +155,7 @@
         }
       }
       .cta {
-        span {
+        & > span {
           margin-top: 35px;
           font-size: 1.35em;
           display: block;
@@ -184,10 +184,13 @@
             padding: 10px 20px;
             font-size: 4vw;
           }
+          span {
+            margin-left: 5px;
+          }
           &::before {
             width: 0;
             height: 100%;
-            background-color: lighten($blue, 15);
+            background-color: lighten($blue, 10);
             transition: .25s all;
             position: absolute;
             z-index: -1;
