@@ -1,0 +1,28 @@
+#not_found {
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  font-family: $font;
+  height: 100vh;
+  h1 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    font-weight: bold;
+    font-size: 35vw;
+    color: $not-found-text;
+  }
+  h2 {
+    font-size: 10vw;
+    line-height: 100%;
+    position: absolute;
+    background-image: -webkit-linear-gradient(left, $blue, $green);
+    background-image: -o-linear-gradient(left, $blue, $green);
+    background-image: linear-gradient(to right, $blue, $green);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+}

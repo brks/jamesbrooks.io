@@ -1,0 +1,33 @@
+---
+---
+
+@import 'vars';
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+  background-color: $background;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $medium-green;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $medium-green;
+  color: $white;
+}
+
+@import 'home';
+@import 'services';
+@import 'testimonials';
+@import 'contact';
+
+@import '404';

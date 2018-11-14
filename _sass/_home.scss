@@ -1,0 +1,210 @@
+#homepage {
+  position: relative;
+  overflow-x: hidden;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  #header {
+    z-index: 1;
+    margin: 0 auto;
+    @include flexbox;
+    max-height: 900px;
+    max-width: 1300px;
+    position: relative;
+    font-family: $font;
+    min-height: 400px;
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
+    #header-content {
+      left: 50px;
+      bottom: 50px;
+      visibility: hidden;
+      position: absolute;
+      align-self: flex-end;
+      z-index: 2;
+      @media screen and (max-width: 1000px) {
+        left: 25px;
+        right: 25px;
+      }
+      @media screen and (max-width: 800px) {
+        bottom: 0;
+      }
+      @media screen and (max-width: 500px) {
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        text-align: center;
+        align-self: center;
+        position: relative;
+        order: 2;
+      }
+      h1 {
+        color: $black;
+        font-weight: 600;
+        font-size: 4em;
+        @media screen and (max-width: 900px) {
+          font-size: 6vw;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 7vw;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 12vw;
+        }
+      }
+      p {
+        font-size: 2em;
+        margin-top: 5px;
+        color: $grey;
+        font-weight: normal;
+        @media screen and (max-width: 900px) {
+          font-size: 2.5vw;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 3.5vw;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 5.5vw;
+        }
+      }
+      a {
+        color: $white;
+        margin-top: 35px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        visibility: hidden;
+        background-color: $medium-green;
+        transition: all .35s;
+        margin-right: auto;
+        border-radius: 8px;
+        padding: 12px 25px;
+        font-size: 1.3em;
+        overflow: hidden;
+        outline: none;
+        border: none;
+        left: 0px;
+        top: 0px;
+        span {
+          margin-left: 5px;
+        }
+        &::before {
+          width: 0;
+          height: 100%;
+          background-color: lighten($medium-green, 15);
+          transition: .25s all;
+          position: absolute;
+          z-index: -1;
+          content: '';
+          left: 0;
+          top: 0;
+        }
+        &:hover {
+          box-shadow: 3px 3px 15px darken($offwhite, 10);
+          top: -2px;
+          left: -2px;
+          &::before {
+            width: 100%;
+          }
+        }
+        &:active {
+          box-shadow: 0;
+          top: 0px;
+          left: 0px;
+        }
+        @media screen and (max-width: 1000px) {
+          margin-top: 25px;
+          font-size: 2vw;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 2.5vw;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 3vw;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 4vw;
+        }
+        @media screen and (max-width: 400px) {
+          padding: 8px 20px;
+        }
+      }
+    }
+    #header-background-container {
+      z-index: 1;
+      visibility: hidden;
+      padding-bottom: 75%;
+      position: relative;
+      margin-left: auto;
+      right: -20%;
+      width: 75%;
+      height: 0;
+      @media screen and (max-width: 500px) {
+        right: auto;
+        padding-bottom: 100%;
+        width: 100%;
+      }
+      #header-background {
+        border-radius: 20%;
+        transform: rotate(45deg);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: -25%;
+        #image-container {
+          width: 70%;
+          height: 70%;
+          position: relative;
+          background-color: $green;
+          border-radius: 20%;
+          overflow: hidden;
+          margin: 15%;
+          #image {
+            height: 0;
+            width: 100%;
+            padding-bottom: 150%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: $light-green;
+            background-blend-mode: multiply;
+            background-image: url('../images/james.png');
+            background-position: center center;
+            transform: rotate(-45deg) scale(0.8);
+            position: relative;
+            right: -10%;
+            top: -15%;
+            &::after {
+              content: '';
+              height: 0;
+              width: 100%;
+              padding-top: 150%;
+              display: block;
+              background-color: $blue;
+              mix-blend-mode: lighten;
+              opacity: 0.75;
+            }
+          }
+        }
+        &::before {
+          content: '';
+          width: 85%;
+          height: 85%;
+          background-color: lighten($green, 35);
+          position: absolute;
+          border-radius: 20%;
+          margin: 7.5%;
+          z-index: -2;
+        }
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: lighten($green, 45);
+          position: absolute;
+          border-radius: 20%;
+          z-index: -3;
+          top: 0;
+        }
+      }
+    }
+  }
+}

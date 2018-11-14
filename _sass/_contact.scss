@@ -1,0 +1,43 @@
+#contact {
+  z-index: 1;
+  height: 300px;
+  @include flexbox;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font;
+  position: relative;
+  will-change: top;
+  @media screen and (max-width: 400px) {
+    height: 200px;
+  }
+  h4 {
+    font-size: 1.5em;
+    color: $grey;
+    font-weight: normal;
+    @media screen and (max-width: 600px) {
+      font-size: 5vw;
+    }
+  }
+  a {
+    font-size: 2.5em;
+    text-decoration: none;
+    -webkit-transition: .35s all;
+    background-position: left 0;
+    background-size: 300% 100%;
+    background-image: -webkit-linear-gradient(left, $black, $black, $blue, $green);
+    background-image: -o-linear-gradient(left, $black, $black, $blue, $green);
+    background-image: linear-gradient(to right, $black, $black, $blue, $green);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-color: $black;
+    transition: .35s all;
+    font-weight: 700;
+    &:hover {
+      background-position: right 0;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 7vw;
+    }
+  }
+}

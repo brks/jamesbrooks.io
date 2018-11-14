@@ -1,0 +1,20 @@
+{
+    "name": "James Brooks",
+    "short_name": "James Brooks",
+    "description": "Front-end developer and designer from the United Kingdom.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1ACF7F",
+    "background_color": "#1ACF7F",
+    "display": "standalone"
+}
