@@ -1,85 +1,28 @@
 ---
 layout: default
 title: Home
-heading: I'm James.
 order: 0
-image_preload:
+preload:
   - /images/james.png
-js:
-  - /js/animations.js
 ---
 
-<div id="homepage">
-  <header id="header">
-    <div id="header-content">
-      <h1>{{ page.heading }}</h1>
-      <p>I'm a Software Engineer from<br>the United Kingdom.</p>
-      <a href="mailto:hi@jamesbrooks.io">Say hi <span>👋</span></a>
-    </div>
-    <div id="header-background-container">
-      <div id="header-background">
-        <div id="image-container">
-          <div id="image"></div>
-        </div>
+<div id="page">
+  <div id="home">
+    <div id="content">
+      <div id="text">
+        <h2 class="reveal">
+          <span class="line">Hi, I'm </span>
+          <span class="line">James.</span>
+        </h2>
+        <p class="reveal">
+          <span class="line">I'm a Software Engineer at</span>
+          <span class="line"><a class="starling" href="https://starlingbank.com" target="_blank" rel="noreferrer noopener">Starling Bank</a> in London.</span>
+        </p>
+        <div class="link"><a href="mailto:james@jamesbrooks.io">Get in touch <span>👋</span></a></div>
+      </div>
+      <div id="image">
+        <img src="/images/james.png" alt="James Brooks">
       </div>
     </div>
-  </header>
-
-  <section id="services">
-    <div id="web-development">
-      <div class="text left">
-        <p>I have experience with a range of modern web technologies, and I have been designing and developing websites for the past 6 years - picking up numerous new skills and best practices in the process.</p>
-        <div class="cta">
-          <span>In need of a new website?</span>
-          <a href="mailto:hi@jamesbrooks.io">Let's talk <span>✋</span></a>
-        </div>
-      </div>
-      <div id="browser">
-        <div class="top-bar">
-          <div class="buttons">
-            <div class="red button"></div>
-            <div class="orange button"></div>
-            <div class="green button"></div>
-          </div>
-          <span id="address-bar"></span>
-        </div>
-        <div class="window"></div>
-      </div>
-    </div>
-    <div id="software-engineering">
-      <div id="terminal">
-        <div class="top-bar">
-          <div class="buttons">
-            <div class="red button"></div>
-            <div class="orange button"></div>
-            <div class="green button"></div>
-          </div>
-        </div>
-        <div class="window">
-          <p>~ python main.py</p>
-        </div>
-      </div>
-      <div class="text right">
-        <p>I am also able to deliver technical solutions in an assortment of programming languages, for a variety of platforms, and I am always looking to expland my knowledge and pick up new development skills.</p>
-        <div class="cta">
-          <span>In the market for a bespoke application?</span>
-          <a href="mailto:hi@jamesbrooks.io">Let's chat <span>💬</span></a>
-        </div>
-      </div>
-    </div>
-    <div id="services-background-container">
-      <div id="services-background"></div>
-    </div>
-  </section>
-  <section id="testimonials">
-    <h2>Read some of my testimonials.</h2>
-    <ul id="cards">
-      <li class="card">"Working with James on our project has been a pleasure. He is extremely knowledgable, able to solve issues quickly and efficiently and deliver the project on time. Really happy with the support he has given and wouldn't hesitate to recommend."</li>
-      <li class="card">“I have always been impressed with James’ ability of picking up new skills and applying those in developing effective solutions. His solutions show a high degree of professionalism, a fresh take on problem solving and always intuitive yet elegant UIs if applicable.”</li>
-    </ul>
-  </section>
-  <section id="contact">
-    <h4>Get in touch</h4>
-    <a href="mailto:hi@jamesbrooks.io">hi@jamesbrooks.io</a>
-  </section>
+  </div>
 </div>

@@ -2,9 +2,10 @@
   @include flexbox;
   justify-content: center;
   align-items: center;
-  font-family: $font;
+  font-family: $sans-serif-font;
   height: 100vh;
   h1 {
+    opacity: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -12,17 +13,40 @@
     position: relative;
     font-weight: bold;
     font-size: 35vw;
-    color: $not-found-text;
+    color: $offwhite;
+    animation: fadeIn 0.5s 0.75s ease forwards;
   }
   h2 {
+    font-family: $sans-serif-font;
     font-size: 10vw;
     line-height: 100%;
     position: absolute;
-    background-image: -webkit-linear-gradient(left, $blue, $green);
-    background-image: -o-linear-gradient(left, $blue, $green);
-    background-image: linear-gradient(to right, $blue, $green);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: $black;
+    padding: 40px 0;
+    display: block;
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      animation: horizontalReveal 0.5s 0.75s ease forwards;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      display: block;
+      z-index: 10;
+    }
+    &::after {
+      width: 100%;
+      height: 100%;
+      background-color: $background;
+      animation: horizontalReveal 0.25s 0.5s ease forwards;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      display: block;
+      z-index: 100;
+    }
   }
-
 }

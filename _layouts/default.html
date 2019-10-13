@@ -3,48 +3,41 @@
   	<head>
 		<meta charset="utf-8">
     <meta name="title" content="James Brooks">
-		<meta name="description" content="Front-end developer and designer from the United Kingdom.">
+		<meta name="description" content="Software Engineer at Starling Bank">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:title" content="James Brooks">
-    <meta property="og:description" content="Front-end developer and designer from the United Kingdom.">
-    <meta property="og:image" content="{{ site.url }}/images/facebook.png">
+    <meta property="og:description" content="">
 
-    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="{{ site.url }}">
     <meta property="twitter:title" content="James Brooks">
-    <meta property="twitter:description" content="Front-end developer and designer from the United Kingdom.">
-    <meta property="twitter:image" content="{{ site.url }}/images/twitter.png">
+    <meta property="twitter:description" content="">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1ACF7F">
-    <meta name="msapplication-TileColor" content="#1ACF7F">
-    <meta name="theme-color" content="#1ACF7F">
-
-    {% for image in page.image_preload %}
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2E2E2E">
+    <meta name="msapplication-TileColor" content="#2E2E2E">
+    <meta name="theme-color" content="#f4f4f4">
+    
+    {% for image in page.preload %}
       <link rel="preload" href="{{ image }}" as="image">
     {% endfor %}
 
     <link rel="canonical" href="{{ site.url }}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Merriweather:400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/animate.min.css">
     <link rel="stylesheet" href="/css/main.css">
 
 		<title>{{ page.title }} | {{ site.title }}</title>
  	</head>
   	<body>
-
   		{{ content }}
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      {% for js in page.js %}
-        <script src="{{ js }}"></script>
-      {% endfor %}
   	</body>
 </html>

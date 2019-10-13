@@ -3,6 +3,7 @@
 
 @import 'vars';
 @import 'mixins';
+@import 'animations';
 
 html,
 body {
@@ -16,18 +17,12 @@ body {
 }
 
 ::selection {
-  background: $blue;
-  color: $white;
+  background: $highlight;
 }
 
 ::-moz-selection {
-  background: $blue;
-  color: $white;
+  background: $highlight;
 }
 
 @import 'home';
-@import 'services';
-@import 'testimonials';
-@import 'contact';
-
 @import '404';

@@ -1,20 +1,10 @@
 $white: #FFFFFF;
-$offwhite: #F5F5F5;
+$offwhite: #EFEFEF;
+$light-grey: #E5E5E5;
 $black: #000000;
-$grey: #7F7F7F;
-$light-green: #2CFE83;
-$medium-green: #1ACF7F;
-$green: #24BB76;
-$blue: #2C5583;
 
+$highlight: $light-grey;
 $background: $white;
 
-$window-red: #E53935;
-$window-amber: #FF8F00;
-$window-green: #4CAF50;
-$window-background: #E0E0E0;
-$terminal-background: #333333;
-
-$not-found-text: #F6F6F6;
-
-$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$sans-serif-font: "Poppins";
+$serif-font: "Merriweather";
